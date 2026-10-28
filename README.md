@@ -50,6 +50,30 @@ flowchart TD
 - [ ] Identificar o link/requisição real de download do Excel (link direto ou automação de navegador)
 - [ ] Definir o caminho da pasta em `Documentos`
 
+## 📁 Estrutura
+
+```
+├── main.py            # entrypoint (executado pela tarefa agendada)
+├── config.py          # caminhos, URLs, retry, logging
+├── src/
+│   ├── logger.py      # logging arquivo + console
+│   ├── downloader.py  # download + retry
+│   └── reporter.py    # métricas e relatório
+├── logs/              # extracao.log (não versionado)
+└── requirements.txt
+```
+
+Os dados baixados ficam fora do repositório (`config.DATA_DIR`, em `Documentos`).
+
+## ▶️ Como rodar
+
+```bash
+python -m venv .venv
+.venv\Scripts\activate
+pip install -r requirements.txt
+python main.py
+```
+
 ## 🛠️ Tecnologias
 
 - Python
