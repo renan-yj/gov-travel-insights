@@ -1,0 +1,25 @@
+# Ambientes virtuais
+.venv/
+venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Dados baixados (não versionar)
+*.xlsx
+*.xls
+*.csv
+data/
+ultima_execucao.json
+
+# Logs
+logs/*
+!logs/.gitkeep
+
+# IDE / SO
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
